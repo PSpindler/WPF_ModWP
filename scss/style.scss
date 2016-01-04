@@ -15,10 +15,11 @@ $black-font-color: #333;
 
 $blue-font-color: #008CBA;
 
-$border-color: $light-font-color+16;
+$border-color: $black-font-color+16;
 
 $dark-background: #333;
 $light-background: #BBB;
+$footer-background: #DDD;
 
 $font-size-small: 13px;
 $font-size: 16px;
@@ -143,26 +144,26 @@ a {
 /*** FOOTER ***/
 
 footer {
-    background-color: $light-background;
+    background-color: $footer-background;
     font-family: Montserrat, sans-serif !important;
-    color: $dark-font-color !important;
+    color: $black-font-color !important;
     padding: 20px 0 5px;
     margin-top: 20px;
 
     ul{
         font-size: $font-size-small;
-        color: $dark-font-color;
+        color: $black-font-color;
     }    
     a{
-        color: $light-font-color !important; 
+        color: $black-font-color !important; 
         
     }
     h3 {
-        color: $dark-font-color !important; 
+        color: $black-font-color !important; 
         margin-bottom: 0px;
     }
     a:hover{
-        color: $dark-font-color !important; 
+        text-decoration: underline;
     }
     .second-column{
         text-align: right;
@@ -172,7 +173,7 @@ footer {
             line-height: 1.2 !important; 
         }
         small{
-            color: $light-font-color !important; 
+            color: $black-font-color !important; 
         }
         
     }
