@@ -1,0 +1,28 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin margin-padding-null() {
+        padding: 0;
+        margin: 0;
+}
+
+@mixin breakpoint($size) {
+    @media only screen and (max-width : $size + px) { @content; }
+}
+
+@mixin linear-gradient($direction, $color-stops...) {
+  background: nth(nth($color-stops, 1), 1);
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+  background: linear-gradient($direction, $color-stops);
+}
+
+@mixin drop-shadow ($x: 5px, $y: 5px, $blur: 2px, $spread: 0, $alpha: 0.25) {
+	-webkit-box-shadow:	$x $y $blur $spread rgba(0, 0, 0, $alpha);
+	   -moz-box-shadow:	$x $y $blur $spread rgba(0, 0, 0, $alpha);
+	    -ms-box-shadow:	$x $y $blur $spread rgba(0, 0, 0, $alpha);
+	        box-shadow:	$x $y $blur $spread rgba(0, 0, 0, $alpha);
+}

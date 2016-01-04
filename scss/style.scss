@@ -1,0 +1,302 @@
+//USED SASS FEATURES
+// 5+ Varaibales
+// 5+ NESTING
+// IMPORT,OPERATORES,REFERENCING PARENT SELECTOR, //-COMMENTS, NESTED @MEDIA, EXTEND
+
+@import 'helper-classes';
+@import 'mixins';
+
+/*** GLOBAL VARIABLES ***/
+
+$weight-font-color: #FFF;
+$light-font-color: #888;
+$dark-font-color: #555;
+$black-font-color: #333;
+
+$blue-font-color: #008CBA;
+
+$border-color: $light-font-color+16;
+
+$dark-background: #333;
+$light-background: #BBB;
+
+$font-size-small: 13px;
+$font-size: 16px;
+$font-size-big: 20px;
+
+/*** GLOBAL STYLES ***/
+*,h1,h2,h3,h4,h5,h6 {
+    font-family: Montserrat, sans-serif;
+}
+a {
+    font-family: Montserrat, sans-serif !important;
+}
+
+.sub-site-head{
+    margin-bottom: 20px;
+    h2{
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+    p {
+        margin-bottom: 0px;
+    }
+}
+
+.row{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/*** SKIP NAV ***/
+
+.skipnav { 
+    text-align: left; 
+    a { 
+        position: absolute; 
+        left: -10000px; 
+        width: 1px; 
+        height: 1px; 
+        overflow: hidden;
+        &:focus,&:active{
+            position: static; 
+            left: 0; 
+            width: auto;
+            height: auto;
+            overflow: visible;
+            text-decoration: underline;
+        }
+    }
+    
+}
+
+/*** NAVIGATIOM ***/
+
+.top-bar{
+    height: auto !important; //!important -> Bad-Practice but only option to overwrite foundation.css
+    .name {
+        height: auto !important;   
+    }
+    .top-bar-section ul li>a{
+        margin-top: 33px;  
+        font-size: ($font-size-small);
+        @include breakpoint(740){ 
+            padding: 0 10px !important; //!important -> Bad-Practice but only option to overwrite foundation.css
+        }
+        @include breakpoint(710){ 
+            font-size: ($font-size-small)-2px;
+            padding: 0 5px !important; //!important -> Bad-Practice but only option to overwrite foundation.css
+        }
+    }
+    .menu-icon{
+        margin-top: 10px !important;
+    }
+}
+
+.right-off-canvas-menu{
+    ul{
+        list-style: none;
+        font-size: $font-size-small;
+        margin: 5px 0 0 10px;
+        li a {
+            color: $weight-font-color !important; //!important -> Bad-Practice but only option to overwrite foundation.css
+        }
+        .active {
+            a{
+                color: $blue-font-color !important;  //!important -> Bad-Practice but only option to overwrite foundation.css
+            }
+        }
+    }
+}
+
+// Fix off-canvas-bug
+.off-canvas-wrap.move-left, .off-canvas-wrap.move-bottom, .off-canvas-wrap.move-top {
+    min-height: auto;
+}
+
+.logo{
+    img {
+        height: 59px !important;
+        margin-top: 9.5px;
+        margin-bottom: 9.5px;
+        margin-left: 10px;
+        float: left;
+    } 
+    &-text{
+        padding: 2px 5px 10px;
+        font-weight: normal !important;
+        color: $weight-font-color !important;
+
+        h1 {
+            font-weight: bold !important;
+            font-size: 40px !important;
+            @include margin-padding-null();
+            color: $weight-font-color !important;
+            line-height: 120% !important;
+        }
+        div {
+            line-height: 120% !important;
+        }        
+    }
+}
+
+/*** FOOTER ***/
+
+footer {
+    background-color: $light-background;
+    font-family: Montserrat, sans-serif !important;
+    color: $dark-font-color !important;
+    padding: 20px 0 5px;
+    margin-top: 20px;
+
+    ul{
+        font-size: $font-size-small;
+        color: $dark-font-color;
+    }    
+    a{
+        color: $light-font-color !important; 
+        
+    }
+    h3 {
+        color: $dark-font-color !important; 
+        margin-bottom: 0px;
+    }
+    a:hover{
+        color: $dark-font-color !important; 
+    }
+    .second-column{
+        text-align: right;
+        border-left: solid 2px ($border-color); 
+        p{
+            @include margin-padding-null();
+            line-height: 1.2 !important; 
+        }
+        small{
+            color: $light-font-color !important; 
+        }
+        
+    }
+    
+    @media only screen and (max-width: 40em) { 
+        .second-column{
+            border-left: solid 0px ($border-color);
+            text-align: left;
+        }
+    }
+}
+
+/*** HOME ***/
+/*************/
+
+    /*** ORBIT ***/
+
+    .orbit-caption p{
+        margin: 0 !important;
+        padding: 0 !important;
+        font-size: $font-size-small !important;
+    }
+
+    .orbit-caption p a{
+        color: $weight-font-color !important;
+    }
+
+    /*** SYMBOLS-CONTAINER ***/
+
+    .menu{
+
+        margin: 25px 0 50px;
+        text-align: center;  
+
+        &-icons{
+            i{
+                font-size: 80px;
+            }
+        }
+        &-text{
+            h3{
+                font-size: $font-size-big;
+                @include margin-padding-null();
+            }
+            p{
+                font-size: $font-size-small;
+            } 
+        }
+    }
+
+/*** BROWSE ***/
+/**************/
+
+     /*** THUMBNAIL ***/
+
+    .gallery{
+        &-text{
+            margin: 10px 0 0;
+            color: $black-font-color !important;
+            p{
+                margin: 0;
+            }
+            .small{
+                font-size: $font-size-small;
+            }
+        }
+    }
+
+/*** SINGLE ***/
+/**************/
+
+     /*** CLEARING ***/
+
+    .single-img {
+        max-width: 50%;
+        padding-right: 3%;
+        padding-bottom: 3%;
+        float: left;
+        
+        @media only screen and (max-width: 40.063em) { 
+            float: none;
+            min-width: 100%;
+        } 
+    }
+
+    .clearing-gallery{
+        margin-top: 10px !important;
+    }
+
+/*** RANKING ***/
+/**************/
+
+     /*** ACCORDION-CONTAINER ***/
+
+    .accordion-container {
+        min-height: 400px;
+    }
+
+    /*** USEFUL LINKS ***/
+    
+    .button_blue{
+        @include border-radius(5px);
+    }
+    .button_lightblue {
+      @extend .button_blue;
+      background-color: lighten($blue-font-color,20%);
+    }
+
+/*** NEW ANIMAL ***/
+/**************/
+
+     /*** FORM ***/
+
+    #form-wrap{
+        min-height: 450px;
+    }
+
+    .slider-value {
+        padding-top: 35px !important;
+    }
+    .submit-button-row{
+        margin-top: 10px;
+    }
+    #submit-button{
+        @include linear-gradient(lighten($blue-font-color,20%),$blue-font-color);
+        @include drop-shadow();
+    }

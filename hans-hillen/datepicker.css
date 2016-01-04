@@ -1,0 +1,134 @@
+#Tab{
+	width: 90%;
+	margin: 20px auto 0;
+}
+
+.datepicker-title{
+	font-size: 16px;
+}
+
+#datepicker-row .dialogSubGroup {
+    border: 1px solid #BBB;
+    padding: 5px;
+ }
+
+#datepicker-row .viewer {
+   padding: 5px 35px;
+   width: 300px;
+   height: 270px;
+}
+
+#datepicker-row .viewer img {
+   border: 1px solid #BBB;
+   padding: 1px;
+}
+
+/* Experimental: Global focus styles */
+
+#datepicker-row .ui-state-focus, .ui-state-focus .ui-button-icon-primary, a.ui-global-focus, input.ui-global-focus, div.ui-global-focus, select.ui-global-focus, button.ui-global-focus {
+	outline: 2px solid #412C84 !important;
+    outline-offset: 0;
+    -moz-outline-radius: 5px;
+}
+
+#datepicker-row .ui-state-focus .ui-button-icon-primary {
+	outline-offset: .4em;
+}
+
+#datepicker-row .ui-button-icon-only.ui-state-focus, .ui-tabs-nav a.ui-global-focus {
+	outline: none !important;
+}
+
+/* End global focus styles */
+
+
+ #datepicker-row .ui-widget-content h3 a {
+    color: navy;
+ }
+
+
+
+ #datepicker-row .logoList {
+	list-style: none;
+ }
+
+ #datepicker-row .logoList li {
+	display: inline;
+ }
+
+ #datepicker-row .logoList img	{
+	border: none;
+ }
+
+ #datepicker-row .leftColumn, #datepicker-row  .rightColumn {
+	float: left;
+	width: 35em;
+	margin-right: 50px;
+ }
+
+ #datepicker-row .clear {
+ 	clear:both;
+ }
+
+ #datepicker-row .tpgLogo {
+	padding: 23px 0;
+ }
+
+#datepicker-row #tabs-11 label { display: inline-block; width: 5em; }
+#datepicker-row #tabs-11 .ui-icon { display: inline-block; }
+#datepicker-row #tabs-11 fieldset div {
+	margin-bottom: 2em;
+}
+#datepicker-row #tabs-11 .ui-tooltip { width: 210px; }
+
+#datepicker-row .toggleTooltips img {
+	margin-bottom: 10px;
+}
+
+#datepicker-row .toggleTooltips blockquote {
+	width: 200px;
+}
+
+#datepicker-row #panel1 {
+    width: 50%;
+}
+
+#datepicker-row .hiddenFieldset {
+    padding: 0;
+    border: 0;
+    border: none;
+    display: inline;
+}
+
+#datepicker-row .hiddenFieldset legend{
+    position: absolute;
+    top: -10000px;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+ }
+
+ #datepicker-row a {
+    color: #000;
+ }
+
+ #datepicker-row .widgetControls {
+ 	margin: 20px 0 0 0;
+ }
+
+ #datepicker-row .widgetControls button {
+ 	margin-right: 10px;
+ }
+
+ #datepicker-row .ui-helper-highcontrast .ui-state-focus a {
+ 	outline: 2px dashed white !important;
+ }
+
+#datepicker-row .ui-datepicker-calendar a.ui-state-focus {
+	text-decoration: underline;
+}
+
+#datepicker-row .ui-popup { position: absolute; z-index: 5000; }
+
+
